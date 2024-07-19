@@ -1,7 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Button } from './Button'
-import { NavLink } from "react-router-dom";
 import { Link } from 'react-router-dom'
 
 
@@ -47,7 +46,7 @@ export function Navbar() {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <NavLink
+                  <Link
                     key={item.name}
                     to={item.href}
                     aria-current={item.current ? 'page' : undefined}                    
@@ -57,7 +56,7 @@ export function Navbar() {
                     )}
                   >
                     {item.name}
-                  </NavLink>
+                  </Link>
                 ))}
               </div>
             </div>
